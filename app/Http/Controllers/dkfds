@@ -1,0 +1,253 @@
+
+HANUMA@GANESH MINGW64 ~
+$ git config --global user.name "miststudent2011"
+$ git config --global user.name "bhanu951"
+
+HANUMA@GANESH MINGW64 ~
+$ git config --global user.email "miststudent2011@gmail.com"
+$ git config --global user.email "bhanu951@gmail.com"
+
+HANUMA@GANESH MINGW64 ~
+$ git config --global user.name
+miststudent2011
+
+HANUMA@GANESH MINGW64 ~
+$ git config --global user.email
+miststudent2011@gmail.com
+
+HANUMA@GANESH MINGW64 ~
+$ cd Desktop
+
+HANUMA@GANESH MINGW64 ~/Desktop
+$ git clone https://github.com/miststudent2011/Laravel.git
+Cloning into 'Laravel'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+HANUMA@GANESH MINGW64 ~/Desktop
+$ cd laravel
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ ^C
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ cd..
+bash: cd..: command not found
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ cd ..
+
+HANUMA@GANESH MINGW64 ~/Desktop
+$ cd laravel
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ ls
+README.md
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ vim readme.md
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ cd..
+bash: cd..: command not found
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ cd..
+bash: cd..: command not found
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ cd ..
+
+HANUMA@GANESH MINGW64 ~/Desktop
+$ git clone https://github.com/miststudent2011/Laravel.git
+$ git clone https://github.com/bhanu003/laravel_learning.git
+fatal: destination path 'Laravel' already exists and is not an empty directory.
+
+HANUMA@GANESH MINGW64 ~/Desktop
+$ git clone https://github.com/miststudent2011/Laravel.git
+Cloning into 'Laravel'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+HANUMA@GANESH MINGW64 ~/Desktop
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+HANUMA@GANESH MINGW64 ~/Desktop
+$ cd laravel
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ vim readme.md
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git add README.md
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git commit -m "updated readme file for better understanding"
+[master da5fcac] updated readme file for better understanding
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git add README.md
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git log
+commit da5fcac1550896655ae6ecf796cc86111e212d57 (HEAD -> master)
+Author: miststudent2011 <miststudent2011@gmail.com>
+Date:   Sun Sep 24 20:59:45 2017 +0530
+
+    updated readme file for better understanding
+
+commit 5f899862d2edb6c988e328e08ca6a546fcd9552e (origin/master, origin/HEAD)
+Author: miststudent2011 <miststudent2011@users.noreply.github.com>
+Date:   Sun Sep 24 20:48:03 2017 +0530
+
+    Initial commit
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git remote add origin https://github.com/laravel/laravel.git
+fatal: remote origin already exists.
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git remote add origin https://github.com/miststudent2011/Laravel.git
+fatal: remote origin already exists.
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 292 bytes | 73.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/miststudent2011/Laravel.git
+   5f89986..da5fcac  master -> master
+Branch master set up to track remote branch master from origin.
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ touch License.txt
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ ls
+License.txt  README.md
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        License.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git add .
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git commit -m "License.txt is added"
+[master c27ce7e] License.txt is added
+ 1 file changed, 5 insertions(+)
+ create mode 100644 License.txt
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git log
+commit c27ce7e6f5b3faad8f0faf8112355a8326204540 (HEAD -> master)
+Author: miststudent2011 <miststudent2011@gmail.com>
+Date:   Sun Sep 24 21:42:23 2017 +0530
+
+    License.txt is added
+
+commit da5fcac1550896655ae6ecf796cc86111e212d57 (origin/master, origin/HEAD)
+Author: miststudent2011 <miststudent2011@gmail.com>
+Date:   Sun Sep 24 20:59:45 2017 +0530
+
+    updated readme file for better understanding
+
+commit 5f899862d2edb6c988e328e08ca6a546fcd9552e
+Author: miststudent2011 <miststudent2011@users.noreply.github.com>
+Date:   Sun Sep 24 20:48:03 2017 +0530
+
+    Initial commit
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 866 bytes | 288.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/miststudent2011/Laravel.git
+   da5fcac..c27ce7e  master -> master
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$ git pull origin master
+From https://github.com/miststudent2011/Laravel
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+HANUMA@GANESH MINGW64 ~/Desktop/laravel (master)
+$
