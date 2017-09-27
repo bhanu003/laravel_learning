@@ -125,4 +125,5 @@ Route::get('/tasks/{num}', function ($id) {
  Route::get('/tasks','TasksController@index'); 
  Route::get('/tasks/{num}','TasksController@show'); 
  
- Route::resource('products/index','ProductController@index');
+ Route::resource('products','ProductController');
+ Route::resource('crud', 'CRUDController');
