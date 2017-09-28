@@ -21,21 +21,21 @@
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="name">Name:</label>
-            <input type="text" class="form-control" name="name" >
+            <input type="text" class="form-control" name="name" value="{{ old( 'name' ) }}">
           </div>
         </div>
         <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="description">Description:</label>
-              <input type="text" class="form-control" name="description" >
+              <input type="text" class="form-control" name="description" value="{{ old( 'description' ) }}" >
             </div>
           </div> 
 		  <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="price">Price:</label>
-              <input type="text" class="form-control" name="price" >
+              <input type="text" class="form-control" name="price" value="{{ old( 'price' ) }}" >
             </div>
           </div>
         </div>

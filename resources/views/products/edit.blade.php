@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
+  <br>
+  <br>
     <div class="container">
 	<form method="post" action="{{action('ProductController@update', $id)}}">
 	<div class="form-group row">
