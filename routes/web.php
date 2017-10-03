@@ -122,8 +122,16 @@ Route::get('/tasks/{num}', function ($id) {
  
  // Creating Controllers
  
- Route::get('/tasks','TasksController@index'); 
- Route::get('/tasks/{num}','TasksController@show'); 
- 
- Route::resource('products','ProductController');
- Route::resource('crud', 'CRUDController');
+Route::get('/tasks','TasksController@index'); 
+Route::get('/tasks/{num}','TasksController@show'); 
+
+Route::resource('products','ProductController');
+Route::resource('crud', 'CRUDController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
