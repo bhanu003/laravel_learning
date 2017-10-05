@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
    protected $fillable = ['title','body'];
-}
+
 
 public function comments()
 {
@@ -23,4 +23,5 @@ public function addComment($body)
 		'body'=>request('body'),
 		'article_id'=>$this->id
 		]); */
+}
 }
