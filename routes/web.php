@@ -127,6 +127,9 @@ Route::get('/tasks/{num}','TasksController@show');
 
 Route::resource('products','ProductController');
 Route::resource('crud', 'CRUDController');
+Route::resource('/articles','ArticlesController');
+Route::post('/articles/{post}/comments','CommentsController@store');
+
 
 Auth::routes();
 

@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in as 
+					<b>{{Auth::user()->name}}!</b>
+					with Mail Id as
+					<b>{{Auth::user()->email}}</b>
+					<br>
+					Welcome to the Home Page............
                 </div>
             </div>
         </div>
