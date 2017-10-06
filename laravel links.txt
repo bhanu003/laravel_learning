@@ -1,0 +1,14 @@
+https://laracasts.com/series/laravel-from-scratch-2017/episodes/3?autoplay=true
+
+https://devdojo.com/series/laravel-5-3-basics/episode/relationships
+
+https://github.com/KodeBlog/Laradmin
+
+https://scotch.io/tutorials/a-guide-to-using-eloquent-orm-in-laravel
+
+https://github.com/groloop
+
+https://tutorials.kode-blog.com/laravel-5-eloquent-relationships
+
+https://github.com/bovisp/laravel-from-scratch
+

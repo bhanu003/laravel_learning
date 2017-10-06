@@ -3,20 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
 
-class ArticlesController extends Controller
+class SessionsController extends Controller
 {
-	  /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-	
     /**
      * Display a listing of the resource.
      *
@@ -24,9 +13,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-		$articles_list = Articles::latest()->get()->toArray();
-        
-        return view('articles.index', compact('articles_list')); 
+        //
     }
 
     /**
@@ -36,7 +23,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        //
     }
 
     /**
@@ -47,18 +34,7 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        $this -> validate(request(), [
-		  'title' => 'required|min:3',
-		  'body' => 'required|min:3',
-		  
-		]);
-        $articles_list = new Article([
-          'title' => $request->get('title'),
-          'body' => $request->get('body'),
-        ]);
-
-        $articles_list->save();
-        return redirect('/articles');
+        //
     }
 
     /**
@@ -69,8 +45,7 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        $articles_list = Articles::find($id);
-		return view('articles.show', compact('articles_list','id'));
+        //
     }
 
     /**
@@ -81,9 +56,7 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        $articles_list = Articles::find($id);
-        
-        return view('articles.edit', compact('articles_list','id'));
+        //
     }
 
     /**
@@ -95,11 +68,7 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $articles_list = Product::find($id);
-        $articles_list->title = $request->get('title');
-        $articles_list->body = $request->get('body');
-        $articles_list->save();
-        return redirect('/articles');
+        //
     }
 
     /**
@@ -110,9 +79,7 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-      $articles_list = Articles::find($id);
-      $articles_list->delete();
-
-      return redirect('/articles');
+        auth()->logout();
+		return redirect()->home();
     }
 }

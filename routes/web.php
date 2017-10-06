@@ -127,14 +127,18 @@ Route::get('/tasks/{num}','TasksController@show');
 
 Route::resource('products','ProductController');
 Route::resource('crud', 'CRUDController');
+
 Route::resource('/articles','ArticlesController');
 Route::post('/articles/{post}/comments','CommentsController@store');
 
+Route::get('/register','RegistrationController@create'); 
+Route::post('/register','RegistrationController@store'); 
 
-Auth::routes();
+Route::get('/login','SessionController@create'); 
+Route::post('/logout','SessionController@destroy'); 
+
+/* Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+*/
