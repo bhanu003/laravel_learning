@@ -35,8 +35,8 @@
 		 <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-              <label for="repassword">Re-Password:</label>
-              <input type="password" class="form-control" name="repassword" required>
+              <label for="password_confirmation">Re-Password:</label>
+              <input type="password" class="form-control" name="password_confirmation" required>
             </div>
           </div> 
         </div>

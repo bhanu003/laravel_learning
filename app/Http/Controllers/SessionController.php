@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SessionsController extends Controller
+class SessionController extends Controller
 {
+	  public function __construct()
+    {
+        $this->middleware('guest',['except'=>'destroy']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +27,7 @@ class SessionsController extends Controller
      */
     public function create()
     {
-        //
+        return view('sessions.create');
     }
 
     /**
@@ -32,9 +36,13 @@ class SessionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        if(! auth()->attempt(request(['email','password']))){
+			return back()->withErrors([
+			'message'=>'Please check your credentials and try again.'
+			]);
+			}
     }
 
     /**

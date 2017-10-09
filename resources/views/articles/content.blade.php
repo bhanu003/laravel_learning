@@ -5,11 +5,11 @@
   </a>
   
   </h2>
-  
+  on
 	<p class="blog-post-meta">
 	{{$article->created_at->toFormattedDataString()}} 
 	by 
-	<a href="#">Mark</a>
+	<a href="#">{{$article->user->name}}</a>
 	</p>
 	
 	  <p>{{$article->body}}</p>

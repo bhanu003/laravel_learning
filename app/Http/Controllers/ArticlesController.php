@@ -14,7 +14,7 @@ class ArticlesController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['index','show']);
     }
 	
     /**
@@ -24,7 +24,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-		$articles_list = Articles::latest()->get()->toArray();
+		$articles_list = Article::latest()->get()->toArray();
         
         return view('articles.index', compact('articles_list')); 
     }
@@ -52,12 +52,11 @@ class ArticlesController extends Controller
 		  'body' => 'required|min:3',
 		  
 		]);
-        $articles_list = new Article([
-          'title' => $request->get('title'),
-          'body' => $request->get('body'),
-        ]);
+		
+		auth()->user()->publish(
+		new Article(request(['title','body']))
+		);
 
-        $articles_list->save();
         return redirect('/articles');
     }
 
@@ -69,7 +68,7 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        $articles_list = Articles::find($id);
+        $articles_list = Article::find($id);
 		return view('articles.show', compact('articles_list','id'));
     }
 
@@ -81,7 +80,7 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        $articles_list = Articles::find($id);
+        $articles_list = Article::find($id);
         
         return view('articles.edit', compact('articles_list','id'));
     }
@@ -95,7 +94,7 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $articles_list = Product::find($id);
+        $articles_list = Article::find($id);
         $articles_list->title = $request->get('title');
         $articles_list->body = $request->get('body');
         $articles_list->save();
@@ -110,7 +109,7 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-      $articles_list = Articles::find($id);
+      $articles_list = Article::find($id);
       $articles_list->delete();
 
       return redirect('/articles');

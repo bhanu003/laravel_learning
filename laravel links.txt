@@ -12,3 +12,4 @@ https://tutorials.kode-blog.com/laravel-5-eloquent-relationships
 
 https://github.com/bovisp/laravel-from-scratch
 
+https://laravel-news.com/your-first-laravel-application
